@@ -1,6 +1,6 @@
 # AKKA Electromechanical Contracting
 
-Company website showcasing AKKA's services, projects, careers and contact information.
+Visual prototype for AKKA management review, covering documented services, selected projects, career-interest categories and corporate contact information.
 
 Built with React, TypeScript, Vite and Tailwind CSS.
 
@@ -25,10 +25,14 @@ The production files are written to `dist/`.
 
 ## Deployment
 
-Import this repository into Vercel with the Vite preset and the repository root as the root directory. Build and output settings, including direct page navigation, are defined in `vercel.json`. No environment variables are required for the current website.
+Release gate: the current content-accuracy changes require explicit approval of the final local diff before any commit, GitHub push or Vercel deployment. Keep the official company domain and DNS outside this review.
+
+The existing Vite build and SPA route settings remain defined in `vercel.json`. No environment variables are required for this prototype.
 
 ## Company review
 
 This version is prepared for company review. Search engine indexing is disabled in `index.html` and `public/robots.txt` until the public launch.
 
-Contact and career forms prepare messages in the visitor's email application. Visitors send the message themselves and attach their CV when applicable. Automatic submissions and document uploads can be connected after approval.
+Contact and career-interest forms prepare drafts in the visitor's email application; the website does not send, store or process submissions. Recruitment availability and the appropriate CV recipient need company confirmation.
+
+The supplied prequalification PDF and content-audit records are local review materials only and must not be committed or served as public assets. Project images are explicitly illustrative.

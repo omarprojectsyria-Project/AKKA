@@ -12,5 +12,7 @@ vite.config.*.timestamp-*
 logs/
 *.log
 .tmp-*
+CONTENT_ACCURACY_REVIEW.md
+*.pdf
 .DS_Store
 Thumbs.db

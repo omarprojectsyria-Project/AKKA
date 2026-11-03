@@ -5,18 +5,11 @@ import electricalImage from './assets/services/electrical.webp'
 import hvacImage from './assets/services/hvac.webp'
 import plumbingImage from './assets/services/plumbing.webp'
 import fireImage from './assets/services/fire-fighting.webp'
-import fitOutImage from './assets/services/fit-out.webp'
 
 const photos = {
   hero: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1800&q=88',
   building:
     'https://images.unsplash.com/photo-1526495124232-a04e1849168c?auto=format&fit=crop&w=1200&q=85',
-  project1:
-    'https://images.unsplash.com/flagged/photo-1559717865-a99cac1c95d8?auto=format&fit=crop&w=900&q=85',
-  project2:
-    'https://images.unsplash.com/photo-1546412414-8035e1776c9a?auto=format&fit=crop&w=900&q=85',
-  project3:
-    'https://images.unsplash.com/photo-1612409578638-b890d0fa9364?auto=format&fit=crop&w=900&q=85',
 }
 
 const Icon = ({ name }: { name: string }) => {
@@ -83,29 +76,26 @@ const Button = ({ children, dark = false, href = '/contact#quote' }: { children:
 )
 
 const services = [
-  { icon: 'bolt', title: 'Electrical', copy: 'Powering safe, efficient and future-ready buildings.', image: electricalImage, dark: false },
-  { icon: 'fan', title: 'Mechanical & HVAC', copy: 'Creating comfortable and energy-efficient environments.', image: hvacImage, dark: true },
-  { icon: 'faucet', title: 'Plumbing', copy: 'Reliable water supply and drainage solutions for modern buildings.', image: plumbingImage, dark: false },
-  { icon: 'fire', title: 'Fire Fighting', copy: 'Life safety systems designed for maximum protection.', image: fireImage, dark: true },
-  { icon: 'tools', title: 'Fit-Out', copy: 'Transforming spaces with quality and precision.', image: fitOutImage, dark: false },
+  { icon: 'bolt', title: 'Electrical', copy: 'Power distribution, lighting and low-current building systems.', image: electricalImage, dark: false },
+  { icon: 'fan', title: 'Mechanical & HVAC', copy: 'Air conditioning, chilled water and ventilation systems.', image: hvacImage, dark: true },
+  { icon: 'faucet', title: 'Plumbing', copy: 'Water supply, drainage and associated building networks.', image: plumbingImage, dark: false },
+  { icon: 'fire', title: 'Fire Fighting', copy: 'Fire suppression, sprinkler and riser system installation.', image: fireImage, dark: true },
+  { icon: 'tools', title: 'Operation & Maintenance', copy: 'Preventive and corrective maintenance within agreed project scopes.', image: hvacImage, dark: false },
 ]
 
-const projects = [
-  { title: 'Business Tower', type: 'Commercial', image: photos.project1 },
-  { title: 'Riverside Residences', type: 'Residential', image: photos.project2 },
-  { title: 'Knowledge Hub', type: 'Educational', image: photos.project3 },
-]
-
+// Physical PDF pages. Status describes the source record, not a live project update.
+// Images are existing prototype illustrations, never represented as project photography.
 const portfolioProjects = [
-  { title: 'Business Tower', type: 'Commercial', image: aboutBuilding, location: 'Dubai, UAE', copy: 'Complete MEP solutions for a premium grade commercial tower.', summary: 'A landmark commercial development with fully integrated electromechanical systems, delivering efficiency, reliability and long-term value.' },
-  { title: 'Riverside Residences', type: 'Residential', image: photos.project2, location: 'Dubai, UAE', copy: 'Integrated MEP systems for a modern residential community.', summary: 'Integrated building services designed around everyday comfort, energy efficiency and dependable performance for a modern residential community.' },
-  { title: 'Knowledge Hub', type: 'Educational', image: photos.project3, location: 'Abu Dhabi, UAE', copy: 'MEP works for a next-generation educational facility.', summary: 'Coordinated mechanical, electrical and plumbing solutions supporting safe, comfortable and future-ready learning environments.' },
-  { title: 'Al Noor Medical Centre', type: 'Healthcare', image: 'https://images.unsplash.com/photo-1626315869436-d6781ba69d6e?auto=format&fit=crop&w=1000&q=85', location: 'Sharjah, UAE', copy: 'Full electromechanical fit-out for a multi-specialty hospital.', summary: 'An integrated electromechanical fit-out focused on reliable building services, indoor comfort and the demanding needs of a healthcare environment.' },
-  { title: 'Skyline Hotel & Residences', type: 'Hospitality', image: 'https://images.unsplash.com/photo-1771293549382-62829fad8f2d?auto=format&fit=crop&w=1000&q=85', location: 'Dubai, UAE', copy: 'MEP solutions for a luxury hotel and serviced residences.', summary: 'Building systems that work together to support guest comfort, operational efficiency and a welcoming hospitality experience.' },
-  { title: 'Logistics Facility', type: 'Industrial', image: fireImage, location: 'Jebel Ali, UAE', copy: 'Mechanical, electrical and fire fighting systems for an industrial facility.', summary: 'Robust mechanical, electrical and fire fighting solutions coordinated for the practical needs of an industrial and logistics environment.' },
+  { title: 'Saadiyat Reserve Mosque and Community Nodes', type: 'Community', image: fireImage, location: 'Abu Dhabi, UAE', copy: 'MEP works for the mosque and community nodes.', summary: 'The prequalification lists MEP works for Saadiyat Reserve Mosque and Community Nodes in Abu Dhabi.', client: 'ALDAR Properties PJSC', scope: 'MEP', source: 'p. 30; project imagery pp. 70–75' },
+  { title: 'Construction of Emirati School – Al Mezairah', type: 'Educational', image: electricalImage, location: 'Sharjah, UAE', copy: 'MEP works for the Al Mezairah school project.', summary: 'The documented Al Mezairah school project is located in Sharjah, with MEP listed as AKKA’s scope.', client: 'Presidential Court', scope: 'MEP', source: 'p. 30; project imagery pp. 76–78' },
+  { title: 'ECSSR Training Centre Building', type: 'Institutional', image: hvacImage, location: 'Abu Dhabi, UAE', copy: 'MEP works for the ECSSR training centre.', summary: 'The training centre in Abu Dhabi is listed for the Emirates Center for Strategic Studies and Research, with MEP as AKKA’s scope.', client: 'The Emirates Center for Strategic Studies and Research', scope: 'MEP', source: 'p. 30; project imagery p. 68' },
+  { title: 'Mayan Towers', type: 'Towers', image: plumbingImage, location: 'Abu Dhabi, UAE', copy: 'Plumbing and electrical works.', summary: 'Listed as Mayan Towers in the completed-project table. The image section identifies Yas Island Mayan, Abu Dhabi.', client: 'AL DAR', scope: 'Plumbing & Electrical', source: 'p. 31; location caption p. 53' },
+  { title: 'Leaf Tower', type: 'Towers', image: electricalImage, location: 'Abu Dhabi, UAE', copy: 'Plumbing and electrical works.', summary: 'Leaf Tower is documented in the completed-project table, with Abu Dhabi identified in its project image caption.', client: '3AM Property Investment Co', scope: 'Plumbing & Electrical Works', source: 'p. 31; location caption p. 48' },
+  { title: 'Design & Build Mazyraa Border Crossing Extension', type: 'Infrastructure', image: fireImage, location: 'Masfout Area, Ajman, UAE', copy: 'MEP works for the border crossing extension.', summary: 'The completed-project table identifies this extension in the Masfout Area of Ajman. The project name follows that table’s wording.', client: 'United Arab Emirates Presidential Court', scope: 'MEP', source: 'p. 30' },
 ]
 
-const projectCategories = ['All Projects', 'Commercial', 'Residential', 'Educational', 'Healthcare', 'Hospitality', 'Industrial']
+const projects = portfolioProjects.slice(0, 3)
+const projectCategories = ['All Projects', 'Community', 'Educational', 'Institutional', 'Towers', 'Infrastructure']
 type PortfolioProject = (typeof portfolioProjects)[number]
 
 const careerAreas = [
@@ -134,7 +124,7 @@ function CareersPage() {
   function prepareApplication(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
     const data = new FormData(event.currentTarget)
-    const subject = `Career interest — ${area || 'General application'}`
+    const subject = `Career interest — ${area || 'General interest'}`
     const body = [
       `Name: ${data.get('fullName')}`,
       `Email: ${data.get('email')}`,
@@ -144,16 +134,16 @@ function CareersPage() {
       '',
       String(data.get('introduction')),
       '',
-      'Please find my CV attached.',
+      'Please advise whether recruitment inquiries are currently accepted and which contact to use.',
     ].join('\n')
-    window.location.href = `mailto:info@akka-me.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    window.location.href = `mailto:info@akka-mep.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
     setEmailPrepared(true)
   }
 
   return (
     <>
       <section className="hero services-hero careers-hero">
-        <img className="hero-image" src={heroImage} alt="AKKA engineers looking towards the Dubai skyline" fetchPriority="high" />
+        <img className="hero-image" src={heroImage} alt="Illustrative engineers looking towards the Dubai skyline" fetchPriority="high" />
         <div className="hero-content">
           <p className="eyebrow">CAREERS AT AKKA</p>
           <h1>BUILD YOUR<br /><span>FUTURE</span><br />WITH AKKA</h1>
@@ -166,7 +156,7 @@ function CareersPage() {
         <div>
           <p className="eyebrow">GREAT WORK STARTS WITH GREAT PEOPLE</p>
           <h2 id="culture-heading">Build More Than Projects.<br /><span>Build Your Career.</span></h2>
-          <p>Behind every AKKA project are people who care about doing things well. Engineers, specialists and support teams bring different skills together with one shared purpose: building better.</p>
+          <p>AKKA’s prequalification describes specialist project teams, training and communication across engineering, site and support functions.</p>
           <div className="career-values">
             <div><span><Icon name="users" /></span><div><h3>One Team</h3><p>Share ideas, solve challenges and learn from each other.</p></div></div>
             <div><span><Icon name="gear" /></span><div><h3>Meaningful Work</h3><p>Put your skills to work on integrated MEP projects.</p></div></div>
@@ -180,36 +170,36 @@ function CareersPage() {
       </section>
 
       <section className="career-paths section" id="career-paths" aria-labelledby="career-paths-heading">
-        <div className="career-section-heading"><div><p className="eyebrow">FIND YOUR PLACE</p><h2 id="career-paths-heading">Where Could You<br /><span>Make an Impact?</span></h2></div><p>Explore the teams you could contribute to. Introduce yourself and ask us about current opportunities in your area of expertise.</p></div>
+        <div className="career-section-heading"><div><p className="eyebrow">FIND YOUR PLACE</p><h2 id="career-paths-heading">Where Could You<br /><span>Make an Impact?</span></h2></div><p>Explore career-interest categories related to AKKA’s documented disciplines and functions. Availability requires company confirmation.</p></div>
         <div className="career-area-grid">
           {careerAreas.map((item) => <article className="career-area-card" key={item.title}><span className="career-area-icon"><Icon name={item.icon} /></span><span className="career-area-category">{item.category}</span><h3>{item.title}</h3><p>{item.copy}</p><button type="button" onClick={() => chooseArea(item.title)}>Express Interest <Icon name="arrow" /></button></article>)}
         </div>
-        <p className="career-paths-note">These are career areas, not advertised vacancies. Our team can advise on current availability.</p>
+        <p className="career-paths-note">Career-interest categories only. No current vacancies or recruitment process have been verified for this management review prototype.</p>
       </section>
 
       <section className="career-journey section" aria-labelledby="career-journey-heading">
         <div className="career-section-heading"><div><p className="eyebrow">LET’S GET TO KNOW YOU</p><h2 id="career-journey-heading">Your Next Chapter<br /><span>Starts with a Conversation.</span></h2></div><p>You don’t need to find the perfect role to make the first move. Tell us what you do best and where you’d like to go next.</p></div>
         <ol className="career-journey-steps">
-          <li><span>01</span><Icon name="document" /><h3>Introduce Yourself</h3><p>Share your experience, interests and CV with our team.</p></li>
-          <li><span>02</span><Icon name="chat" /><h3>Start a Conversation</h3><p>Ask about the opportunities that match your skills and ambitions.</p></li>
-          <li><span>03</span><Icon name="handshake" /><h3>Explore the Right Fit</h3><p>Discuss how you could contribute when a suitable opportunity is available.</p></li>
+          <li><span>01</span><Icon name="document" /><h3>Introduce Yourself</h3><p>Prepare a brief description of your experience and interests.</p></li>
+          <li><span>02</span><Icon name="chat" /><h3>Start a Conversation</h3><p>Confirm whether opportunities and a recruitment contact are available.</p></li>
+          <li><span>03</span><Icon name="handshake" /><h3>Explore the Right Fit</h3><p>Share a CV only after confirming the appropriate recipient.</p></li>
         </ol>
       </section>
 
       <section className="career-application section" id="career-application" aria-labelledby="career-application-heading">
-        <div className="career-application-copy"><p className="eyebrow">TAKE THE FIRST STEP</p><h2 id="career-application-heading">Your Experience.<br /><span>Our Next Possibility.</span></h2><p>Tell us a little about yourself and the kind of work you’re interested in. Use the form to prepare an email, then attach your CV before sending.</p><a className="contact-detail" href="mailto:info@akka-me.com?subject=Careers%20at%20AKKA"><span className="contact-detail-icon"><Icon name="mail" /></span><span><b>Careers Inquiries</b><strong>info@akka-me.com</strong><small>Prefer email? Send your introduction and CV directly.</small></span></a><div className="career-application-hint"><Icon name="document" /><p>Keep your CV up to date and include your relevant experience, qualifications and contact details. Please don’t include sensitive identity or financial documents.</p></div></div>
+        <div className="career-application-copy"><p className="eyebrow">TAKE THE FIRST STEP</p><h2 id="career-application-heading">Your Experience.<br /><span>Our Next Possibility.</span></h2><p>Tell us a little about yourself and the kind of work you’re interested in. The form prepares an email draft only; recruitment availability and the appropriate recipient require company confirmation.</p><a className="contact-detail" href="mailto:info@akka-mep.com?subject=Careers%20at%20AKKA"><span className="contact-detail-icon"><Icon name="mail" /></span><span><b>General Corporate Email</b><strong>info@akka-mep.com</strong><small>A dedicated recruitment contact has not been confirmed.</small></span></a><div className="career-application-hint"><Icon name="document" /><p>Keep your CV up to date and include your relevant experience, qualifications and contact details. Please don’t include sensitive identity or financial documents.</p></div></div>
         <div className="contact-form-card">
-          <h2>Introduce <span>Yourself</span></h2><p>All fields are required. You’ll attach your CV in your email app.</p>
+          <h2>Introduce <span>Yourself</span></h2><p>Draft a career-interest inquiry to the general corporate inbox. No application is submitted here.</p>
           <form className="contact-form career-application-form" onSubmit={prepareApplication}>
             <label><span className="contact-label">Full Name *</span><input name="fullName" placeholder="Full Name *" autoComplete="name" required maxLength={160} /></label>
             <label><span className="contact-label">Email Address *</span><input name="email" placeholder="Email Address *" type="email" autoComplete="email" required maxLength={200} /></label>
             <label><span className="contact-label">Phone Number *</span><input name="phone" placeholder="Phone Number *" type="tel" autoComplete="tel" required maxLength={40} /></label>
             <label><span className="contact-label">Experience Level *</span><select name="experience" defaultValue="" required><option value="" disabled>Experience Level *</option><option>Student / Recent Graduate</option><option>1–3 Years</option><option>4–7 Years</option><option>8+ Years</option></select></label>
-            <label className="career-interest-field"><span className="contact-label">Area of Interest *</span><select name="area" value={area} required onChange={(event) => { setArea(event.target.value); setEmailPrepared(false) }}><option value="" disabled>Area of Interest *</option>{careerAreas.map((item) => <option key={item.title}>{item.title}</option>)}<option>General Application</option></select></label>
+            <label className="career-interest-field"><span className="contact-label">Area of Interest *</span><select name="area" value={area} required onChange={(event) => { setArea(event.target.value); setEmailPrepared(false) }}><option value="" disabled>Area of Interest *</option>{careerAreas.map((item) => <option key={item.title}>{item.title}</option>)}<option>General Interest</option></select></label>
             <label className="contact-message-field"><span>A Little About You *</span><textarea name="introduction" placeholder="Tell us about your experience, skills and the kind of opportunity you’re looking for..." required minLength={20} maxLength={3000} rows={5} /></label>
-            <button className="button contact-submit" type="submit">Prepare Application Email <Icon name="arrow" /></button>
-            <p className="contact-form-note">This opens your email app. Attach your CV and press Send there. No application or files are uploaded or stored on this website.</p>
-            {emailPrepared && <p className="contact-form-status" role="status">Your email app should open with your introduction ready. Please attach your CV and press Send. If it doesn’t open, email <a href="mailto:info@akka-me.com?subject=Careers%20at%20AKKA">info@akka-me.com</a> directly.</p>}
+            <button className="button contact-submit" type="submit">Prepare Career Inquiry Email <Icon name="arrow" /></button>
+            <p className="contact-form-note">This prototype opens your email app with a draft only. No application or files are sent, stored or processed by the website. Confirm the recruitment contact before sharing a CV.</p>
+            {emailPrepared && <p className="contact-form-status" role="status">Your email app should open with a draft; nothing has been submitted here. Confirm the recruitment contact through <a href="mailto:info@akka-mep.com?subject=Careers%20at%20AKKA">info@akka-mep.com</a> directly.</p>}
           </form>
         </div>
       </section>
@@ -249,7 +239,7 @@ function ProjectsPage() {
   return (
     <>
       <section className="hero services-hero projects-hero">
-        <img className="hero-image" src={heroImage} alt="AKKA engineers overlooking the Dubai skyline and building services" fetchPriority="high" />
+        <img className="hero-image" src={heroImage} alt="Illustrative engineers overlooking the Dubai skyline and building services" fetchPriority="high" />
         <div className="hero-content">
           <p className="eyebrow">OUR PROJECTS</p>
           <h1>BUILDING<br /><span>REAL IMPACT</span></h1>
@@ -272,7 +262,7 @@ function ProjectsPage() {
         </div>
         <div className="portfolio-heading">
           <div><p className="eyebrow">OUR WORK</p><h2 id="portfolio-heading">Featured <span>Projects</span></h2></div>
-          <p>A selection of our recent projects that reflect our commitment to quality, innovation and client satisfaction.</p>
+          <p>Selected projects documented in AKKA’s prequalification. Images are illustrative; completion status follows the source record.</p>
           <div className="service-controls">
             <button type="button" disabled={offset === 0} onClick={() => setOffset((value) => Math.max(0, value - 1))} aria-label="Previous project order"><Icon name="arrow" /></button>
             <button type="button" disabled={filteredProjects.length < 2 || offset >= filteredProjects.length - 1} onClick={() => setOffset((value) => value + 1)} aria-label="Next project order"><Icon name="arrow" /></button>
@@ -282,7 +272,7 @@ function ProjectsPage() {
         <div className="portfolio-grid">
           {visibleProjects.map((project) => (
             <article className="portfolio-card" key={project.title}>
-              <div className="portfolio-card-image"><img src={project.image} alt={`${project.title} — ${project.type.toLowerCase()} project`} loading="lazy" /><span>{project.type}</span></div>
+              <div className="portfolio-card-image"><img src={project.image} alt={`Illustrative building services image for ${project.title}; not project photography`} loading="lazy" /><small className="image-disclosure">Illustrative image</small><span>{project.type}</span></div>
               <div className="portfolio-card-copy"><h3>{project.title}</h3><p className="portfolio-location"><Icon name="pin" />{project.location}</p><p>{project.copy}</p><button type="button" onClick={() => openProject(project)} aria-label={`View ${project.title} project details`}><Icon name="arrow" /></button></div>
             </article>
           ))}
@@ -291,23 +281,23 @@ function ProjectsPage() {
       </section>
 
       <section className="portfolio-spotlight section" aria-labelledby="spotlight-heading">
-        <img className="spotlight-image" src={featured.image} alt="Business Tower glass-fronted commercial development in Dubai" loading="lazy" />
+        <img className="spotlight-image" src={featured.image} alt="Illustrative architecture; not a photograph of Saadiyat Reserve" loading="lazy" />
         <div className="spotlight-copy">
-          <p className="eyebrow">FEATURED PROJECT</p><h2 id="spotlight-heading">Business <span>Tower</span></h2>
-          <p className="spotlight-meta">Commercial <span aria-hidden="true">|</span> Dubai, UAE</p>
+          <p className="eyebrow">FEATURED PROJECT · ILLUSTRATIVE IMAGE</p><h2 id="spotlight-heading">Saadiyat Reserve<br /><span>Mosque & Community Nodes</span></h2>
+          <p className="spotlight-meta">{featured.type} <span aria-hidden="true">|</span> {featured.location}</p>
           <p>{featured.summary}</p>
           <div className="spotlight-features">
-            <div><Icon name="building" /><span>High-Rise<br />Commercial</span></div>
-            <div><Icon name="gear" /><span>Complete<br />MEP Scope</span></div>
-            <div><Icon name="leaf" /><span>Energy-Efficient<br />Systems</span></div>
-            <div><Icon name="shield" /><span>Delivered<br />On Schedule</span></div>
+            <div><Icon name="building" /><span>Mosque &<br />Community Nodes</span></div>
+            <div><Icon name="gear" /><span>Documented<br />MEP Scope</span></div>
+            <div><Icon name="pin" /><span>Abu Dhabi<br />UAE</span></div>
+            <div><Icon name="document" /><span>Prequalification<br />Page 30</span></div>
           </div>
           <button className="button" type="button" onClick={() => openProject(featured)}>View Project Details <Icon name="arrow" /></button>
         </div>
       </section>
 
       <section className="portfolio-stats section" aria-label="AKKA at a glance">
-        {[{ icon: 'building', value: '50+', label: 'Projects Delivered' }, { icon: 'users', value: '100+', label: 'Skilled Professionals' }, { icon: 'star', value: '10+', label: 'Years of Experience' }, { icon: 'handshake', value: '100%', label: 'Client Satisfaction' }].map((stat) => (
+        {[{ icon: 'building', value: 'MEP', label: 'Coordinated Disciplines' }, { icon: 'users', value: 'Team', label: 'Specialist Project Teams' }, { icon: 'check', value: 'Quality', label: 'Documented Quality Policy' }, { icon: 'shield', value: 'Safety', label: 'Risk Assessment & Training' }].map((stat) => (
           <div key={stat.label}><span><Icon name={stat.icon} /></span><div><strong>{stat.value}</strong><p>{stat.label}</p></div></div>
         ))}
       </section>
@@ -315,9 +305,9 @@ function ProjectsPage() {
       <section className="services-talk projects-talk section">
         <div><p className="eyebrow">LET’S BUILD TOGETHER</p><h2>Start Your <span>Next Project</span></h2><p>Get in touch with our team to discuss your project requirements.<br />We’re here to turn your vision into reality.</p></div>
         <div className="services-talk-details">
-          <a href="tel:+97143214567"><span><Icon name="phone" /></span><div><b>Call Us</b><small>+971 4 321 4567</small></div></a>
-          <a href="mailto:info@akka-me.com"><span><Icon name="mail" /></span><div><b>Email Us</b><small>info@akka-me.com</small></div></a>
-          <a href="/contact#location"><span><Icon name="pin" /></span><div><b>Our Location</b><small>Dubai, UAE</small></div></a>
+          <a href="tel:+97167418994"><span><Icon name="phone" /></span><div><b>Call Us</b><small>+971 6 741 8994</small></div></a>
+          <a href="mailto:info@akka-mep.com"><span><Icon name="mail" /></span><div><b>Email Us</b><small>info@akka-mep.com</small></div></a>
+          <a href="/contact#location"><span><Icon name="pin" /></span><div><b>Documented Office</b><small>Ajman, UAE</small></div></a>
         </div>
         <Button>Get a Quote</Button>
       </section>
@@ -325,8 +315,8 @@ function ProjectsPage() {
       <dialog ref={dialogRef} className="project-dialog" onClose={() => setSelectedProject(null)} onClick={(event) => { if (event.target === event.currentTarget) dialogRef.current?.close() }} aria-labelledby="project-dialog-title">
         {selectedProject && <div className="project-dialog-content">
           <button className="project-dialog-close" type="button" autoFocus aria-label="Close project details" onClick={() => dialogRef.current?.close()}><Icon name="close" /></button>
-          <img src={selectedProject.image} alt={selectedProject.title} />
-          <div className="project-dialog-copy"><p className="eyebrow">{selectedProject.type.toUpperCase()}</p><h2 id="project-dialog-title">{selectedProject.title}</h2><p className="portfolio-location"><Icon name="pin" />{selectedProject.location}</p><p>{selectedProject.summary}</p><h3>Integrated electromechanical solutions</h3><p>{selectedProject.copy}</p><Button>Discuss a Similar Project</Button></div>
+          <img src={selectedProject.image} alt={`Illustrative image for ${selectedProject.title}; not project photography`} />
+          <div className="project-dialog-copy"><p className="eyebrow">{selectedProject.type.toUpperCase()} · ILLUSTRATIVE IMAGE</p><h2 id="project-dialog-title">{selectedProject.title}</h2><p className="portfolio-location"><Icon name="pin" />{selectedProject.location}</p><p>{selectedProject.summary}</p><h3>Documented project details</h3><dl className="project-facts"><div><dt>Client</dt><dd>{selectedProject.client}</dd></div><div><dt>AKKA scope</dt><dd>{selectedProject.scope}</dd></div><div><dt>Source status</dt><dd>Completed, as listed in the prequalification. Current status requires confirmation.</dd></div><div><dt>Reference</dt><dd>AKKA Prequalification, {selectedProject.source}</dd></div></dl><p>Illustrative image — not project photography.</p><Button>Discuss a Similar Project</Button></div>
         </div>}
       </dialog>
     </>
@@ -372,10 +362,10 @@ function ServicesSection({ dedicated = false }: { dedicated?: boolean }) {
 
 const processSteps = [
   { icon: 'chat', title: 'Consult & Plan', copy: 'Understand your needs, objectives and project requirements.' },
-  { icon: 'document', title: 'Design & Engineer', copy: 'Develop tailored, value-driven MEP solutions.' },
-  { icon: 'gear', title: 'Execute & Deliver', copy: 'Deliver with precision, quality and strict safety standards.' },
-  { icon: 'check', title: 'Test & Commission', copy: 'Ensure full system performance and compliance.' },
-  { icon: 'users', title: 'Support & Maintain', copy: 'Ongoing support for long-term reliability and peace of mind.' },
+  { icon: 'document', title: 'Design & Engineer', copy: 'Coordinate drawings, materials and consultant approvals.' },
+  { icon: 'gear', title: 'Execute & Deliver', copy: 'Coordinate site execution, quality checks and safety controls.' },
+  { icon: 'check', title: 'Test & Commission', copy: 'Inspect, test and commission against project requirements.' },
+  { icon: 'users', title: 'Support & Maintain', copy: 'Provide O&M manuals and support within the agreed contractual scope.' },
 ]
 
 function ServicesPage() {
@@ -390,7 +380,7 @@ function ServicesPage() {
   return (
     <>
       <section className="hero services-hero">
-        <img className="hero-image" src={heroImage} alt="AKKA engineers overlooking Dubai beside mechanical and electrical pipework" fetchPriority="high" />
+        <img className="hero-image" src={heroImage} alt="Illustrative engineers overlooking Dubai beside mechanical and electrical pipework" fetchPriority="high" />
         <div className="hero-content">
           <p className="eyebrow">OUR SERVICES</p>
           <h1>INTEGRATED<br /><span>MEP SOLUTIONS</span></h1>
@@ -407,7 +397,7 @@ function ServicesPage() {
             <p className="eyebrow">OUR PROCESS</p>
             <h2 id="process-heading">A Seamless Journey<br /><span>From Vision to Reality</span></h2>
           </div>
-          <p>We follow a proven and collaborative process to ensure every project is delivered with quality, efficiency and complete accountability.</p>
+          <p>Our documented methodology coordinates drawings, material approvals, site work, testing and handover, supported by training and progress records.</p>
         </div>
         <ol className="process-steps">
           {processSteps.map((step, index) => (
@@ -425,12 +415,12 @@ function ServicesPage() {
         <div className="partner-copy">
           <p className="eyebrow">WHY CHOOSE AKKA</p>
           <h2 id="partner-heading">A Partner You Can<br /><span>Build On</span></h2>
-          <p>We bring together deep technical expertise, a commitment to quality and a customer-first approach to deliver MEP solutions that stand the test of time.</p>
+          <p>AKKA’s prequalification sets out a focus on technical coordination, reliable workmanship and long-term client relationships.</p>
           <div className="partner-benefits">
-            <div><span><Icon name="diamond" /></span><div><h3>Proven Expertise</h3><p>Years of experience across complex MEP projects.</p></div></div>
+            <div><span><Icon name="diamond" /></span><div><h3>Proven Expertise</h3><p>Supply, installation, testing and commissioning capabilities.</p></div></div>
             <div><span><Icon name="gear" /></span><div><h3>Integrated Solutions</h3><p>All MEP disciplines under one roof.</p></div></div>
-            <div><span><Icon name="shield" /></span><div><h3>Quality & Safety</h3><p>Uncompromising standards on every project.</p></div></div>
-            <div><span><Icon name="leaf" /></span><div><h3>Sustainable Focus</h3><p>Solutions for a smarter, greener tomorrow.</p></div></div>
+            <div><span><Icon name="shield" /></span><div><h3>Quality & Safety</h3><p>Quality reviews, risk assessment and safety training.</p></div></div>
+            <div><span><Icon name="leaf" /></span><div><h3>Sustainable Focus</h3><p>Energy-saving approaches and responsible site practices.</p></div></div>
           </div>
         </div>
         <div className="about-visual partner-visual">
@@ -451,9 +441,9 @@ function ServicesPage() {
           <p>Get in touch with our experts to explore how AKKA can support your next project.</p>
         </div>
         <div className="services-talk-details">
-          <a href="tel:+97143214567"><span><Icon name="phone" /></span><div><b>Call Us</b><small>+971 4 321 4567</small></div></a>
-          <a href="mailto:info@akka-me.com"><span><Icon name="mail" /></span><div><b>Email Us</b><small>info@akka-me.com</small></div></a>
-          <a href="/contact#location"><span><Icon name="pin" /></span><div><b>Our Location</b><small>Dubai, UAE</small></div></a>
+          <a href="tel:+97167418994"><span><Icon name="phone" /></span><div><b>Call Us</b><small>+971 6 741 8994</small></div></a>
+          <a href="mailto:info@akka-mep.com"><span><Icon name="mail" /></span><div><b>Email Us</b><small>info@akka-mep.com</small></div></a>
+          <a href="/contact#location"><span><Icon name="pin" /></span><div><b>Documented Office</b><small>Ajman, UAE</small></div></a>
         </div>
         <Button>Get a Quote</Button>
       </section>
@@ -487,14 +477,14 @@ function ContactPage() {
       '',
       String(data.get('message')),
     ].join('\n')
-    window.location.href = `mailto:info@akka-me.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    window.location.href = `mailto:info@akka-mep.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
     setEmailPrepared(true)
   }
 
   return (
     <>
       <section className="hero contact-hero">
-        <img className="hero-image" src={heroImage} alt="AKKA engineers overlooking Dubai and integrated building systems" fetchPriority="high" />
+        <img className="hero-image" src={heroImage} alt="Illustrative engineers overlooking Dubai and integrated building systems" fetchPriority="high" />
         <div className="hero-content">
           <p className="eyebrow">GET IN TOUCH</p>
           <h1>LET’S BUILD<br /><span>TOMORROW</span><br />TOGETHER</h1>
@@ -507,30 +497,30 @@ function ContactPage() {
         <div className="contact-information">
           <p className="eyebrow">CONTACT AKKA</p>
           <h2 id="message-heading">Send Us a <span>Message</span></h2>
-          <p className="contact-description">Have a project in mind? Get in touch with our team today. We’ll get back to you promptly to discuss your needs and how we can support your goals.</p>
+          <p className="contact-description">Discuss project requirements using the documented corporate contact details. This management review prototype prepares email drafts only.</p>
           <div className="contact-details">
-            <a className="contact-detail" href="tel:+97143214567">
+            <a className="contact-detail" href="tel:+97167418994">
               <span className="contact-detail-icon"><Icon name="phone" /></span>
-              <span><b>Call Us</b><strong>+971 4 321 4567</strong><small>Sun – Thu, 8:00 AM – 6:00 PM (GST)</small></span>
+              <span><b>Call Us</b><strong>+971 6 741 8994</strong><small>Office telephone listed in the prequalification.</small></span>
             </a>
-            <a className="contact-detail" href="mailto:info@akka-me.com">
+            <a className="contact-detail" href="mailto:info@akka-mep.com">
               <span className="contact-detail-icon"><Icon name="mail" /></span>
-              <span><b>Email Us</b><strong>info@akka-me.com</strong><small>We typically respond within 24 hours.</small></span>
+              <span><b>Email Us</b><strong>info@akka-mep.com</strong><small>Corporate email listed in the prequalification.</small></span>
             </a>
             <a className="contact-detail" href="#location">
               <span className="contact-detail-icon"><Icon name="pin" /></span>
-              <span><b>Our Location</b><strong>Dubai, UAE</strong><small>Serving clients across the UAE and beyond.</small></span>
+              <span><b>Documented Office</b><strong>Ajman, UAE</strong><small>SKY Tower, 5th Floor, Office 503, Ajman.</small></span>
             </a>
-            <a className="contact-detail" href="mailto:projects@akka-me.com">
+            <a className="contact-detail" href="mailto:info@akka-mep.com">
               <span className="contact-detail-icon"><Icon name="users" /></span>
-              <span><b>Business Inquiries</b><small>For new projects and partnerships.</small><strong>projects@akka-me.com</strong></span>
+              <span><b>Business Inquiries</b><small>For new projects and partnerships.</small><strong>info@akka-mep.com</strong></span>
             </a>
           </div>
         </div>
 
         <div className="contact-form-card" id="quote">
           <h2>Contact <span>Form</span></h2>
-          <p>Fill in the form below and our team will get back to you shortly.</p>
+          <p>Prepare an email draft to the documented corporate inbox. Nothing is submitted through this prototype.</p>
           <form className="contact-form" onSubmit={prepareMessage}>
             <label><span className="contact-label">First Name *</span><input name="firstName" autoComplete="given-name" placeholder="First Name *" required maxLength={80} /></label>
             <label><span className="contact-label">Last Name *</span><input name="lastName" autoComplete="family-name" placeholder="Last Name *" required maxLength={80} /></label>
@@ -539,12 +529,12 @@ function ContactPage() {
             <label><span className="contact-label">Phone Number *</span><input name="phone" type="tel" autoComplete="tel" placeholder="Phone Number *" required maxLength={40} /></label>
             <label><span className="contact-label">Inquiry Type *</span><select name="inquiry" defaultValue={initialInquiry} required>
               <option value="" disabled>Inquiry Type *</option>
-              <option>Request a Quote</option><option>General Inquiry</option><option>Electrical</option><option>Mechanical & HVAC</option><option>Plumbing</option><option>Fire Fighting</option><option>Fit-Out</option><option>Partnership</option>
+              <option>Request a Quote</option><option>General Inquiry</option><option>Electrical</option><option>Mechanical & HVAC</option><option>Plumbing</option><option>Fire Fighting</option><option>Operation & Maintenance</option><option>Partnership</option>
             </select></label>
             <label className="contact-message-field"><span>Your Message *</span><textarea name="message" placeholder="Tell us about your project, requirements or any questions..." required minLength={10} maxLength={3000} rows={5} /></label>
-            <button className="button contact-submit" type="submit">Send Message <Icon name="arrow" /></button>
-            <p className="contact-form-note">This form opens your email app with your message ready to send. No details are stored on this website.</p>
-            {emailPrepared && <p className="contact-form-status" role="status">Your message is ready in your email app. Please press Send there to complete your inquiry. If it didn’t open, email us at <a href="mailto:info@akka-me.com">info@akka-me.com</a>.</p>}
+            <button className="button contact-submit" type="submit">Prepare Inquiry Email <Icon name="arrow" /></button>
+            <p className="contact-form-note">This prototype opens your email app. Review the draft and send it there if you choose. The website does not send, store or process inquiries.</p>
+            {emailPrepared && <p className="contact-form-status" role="status">Your email app should open with a draft. Nothing has been sent by this website. If it did not open, use <a href="mailto:info@akka-mep.com">info@akka-mep.com</a>.</p>}
           </form>
         </div>
       </section>
@@ -552,16 +542,16 @@ function ContactPage() {
       <section className="contact-location section" id="location" aria-labelledby="location-heading">
         <div>
           <p className="eyebrow">OUR LOCATION</p>
-          <h2 id="location-heading">Find Us in <span>Dubai</span></h2>
-          <p className="contact-description">Our office is based in Dubai, UAE, and we proudly serve clients across the region, delivering integrated electromechanical solutions for landmark projects.</p>
-          <a className="contact-detail location-address" href="https://www.google.com/maps/search/?api=1&query=Dubai%2C%20United%20Arab%20Emirates" target="_blank" rel="noreferrer">
+          <h2 id="location-heading">Our Documented<br /><span>Ajman Office</span></h2>
+          <p className="contact-description">The prequalification lists this office address and branches in Ajman, Dubai and Abu Dhabi. Please confirm visiting arrangements with the company.</p>
+          <div className="contact-detail location-address">
             <span className="contact-detail-icon"><Icon name="pin" /></span>
-            <span><b>AKKA Electromechanical Contracting</b><small>Dubai, UAE<br />United Arab Emirates</small></span>
-          </a>
+            <span><b>AKKA Electromechanical Contracting L.L.C.</b><small>SKY Tower, 5th Floor, Office No. 503<br />Sheikh Khalifa Bin Zayed Street<br />Al Nuaimiya 2, Ajman, UAE<br />P.O. Box 2288</small></span>
+          </div>
         </div>
         <div className="contact-map">
-          <iframe title="Map of Dubai, United Arab Emirates — AKKA service area" src="https://maps.google.com/maps?q=Dubai%2C%20United%20Arab%20Emirates&z=11&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
-          <a className="map-label" href="https://www.google.com/maps/search/?api=1&query=Dubai%2C%20United%20Arab%20Emirates" target="_blank" rel="noreferrer"><span className="contact-detail-icon"><Icon name="pin" /></span><span><b>AKKA Electromechanical<br />Contracting</b><small>Serving Dubai, UAE</small></span><Icon name="arrow" /></a>
+          <div className="documented-address-panel"><Icon name="building" /><p className="eyebrow">DOCUMENTED OFFICE</p><h3>SKY Tower<br /><span>Ajman, UAE</span></h3><p>5th Floor · Office No. 503<br />Al Nuaimiya 2 · P.O. Box 2288</p></div>
+          <div className="map-label"><span className="contact-detail-icon"><Icon name="pin" /></span><span><b>Ajman · Dubai · Abu Dhabi</b><small>Branches listed in the prequalification</small></span></div>
         </div>
       </section>
 
@@ -607,7 +597,7 @@ export default function App() {
 
       {isContact ? <ContactPage /> : isServices ? <ServicesPage /> : isProjects ? <ProjectsPage /> : isCareers ? <CareersPage /> : <>
       <section className="hero">
-        <img className="hero-image" src={heroImage} alt="AKKA engineers overlooking Dubai beside electromechanical pipework" fetchPriority="high" />
+        <img className="hero-image" src={heroImage} alt="Illustrative engineers overlooking Dubai beside electromechanical pipework" fetchPriority="high" />
         <div className="hero-content">
           <p className="eyebrow">BUILDING</p>
           <h1>BETTER<br /><span>TOMORROW</span></h1>
@@ -632,12 +622,12 @@ export default function App() {
         <div className="about-copy">
           <p className="eyebrow red">ABOUT AKKA</p>
           <h2>Engineering<br />Solutions for<br /><span>a Better Tomorrow</span></h2>
-          <p>AKKA Electromechanical Contracting is a trusted MEP contractor delivering high-quality, integrated solutions across electrical, mechanical, plumbing, fire fighting and fit-out works. We are committed to excellence, safety and sustainability in every project we undertake.</p>
+          <p>AKKA Electromechanical Contracting L.L.C. provides electrical, mechanical & HVAC, plumbing and fire fighting works, with operation and maintenance support. Its documented vision is growth through quality, reliability and trust, supported by collaboration and responsible workmanship.</p>
           <a className="button" href="#services">Learn More <Icon name="arrow" /></a>
           <div className="stats">
-            <div><strong>10+</strong><span>Years of Experience</span></div>
-            <div><strong>100+</strong><span>Projects Delivered</span></div>
-            <div><strong>50+</strong><span>Skilled Professionals</span></div>
+            <div><strong>MEP</strong><span>Core Disciplines</span></div>
+            <div><strong>UAE</strong><span>Documented Branches</span></div>
+            <div><strong>Team</strong><span>Technical Collaboration</span></div>
           </div>
         </div>
         <div className="about-visual">
@@ -645,7 +635,7 @@ export default function App() {
           <div className="mission-card">
             <span className="mission-rule" aria-hidden="true" />
             <h3>Our Mission</h3>
-            <p>To deliver innovative, reliable and sustainable electromechanical solutions that power better communities.</p>
+            <p>To build long-term client and partner relationships through reliable delivery, efficiency, professionalism and honesty.</p>
             <a className="mini-icon" href="#services" aria-label="Explore our electromechanical solutions"><Icon name="arrow" /></a>
           </div>
         </div>
@@ -664,11 +654,11 @@ export default function App() {
         <div className="project-grid">
           {projects.map((project) => (
             <article className="project-card" key={project.title}>
-              <img src={project.image} alt={project.title} />
+              <img src={project.image} alt={`Illustrative image for ${project.title}; not project photography`} /><small className="image-disclosure">Illustrative image</small>
               <div className="project-info">
                 <span>{project.type}</span>
                 <h3>{project.title}</h3>
-                <p>Dubai, UAE</p>
+                <p>{project.location}</p>
                 <a href="/projects" aria-label={`Explore ${project.title} and our projects`}><Icon name="arrow" /></a>
               </div>
             </article>
@@ -688,12 +678,12 @@ export default function App() {
         <div className="why-copy">
           <p className="eyebrow red">WHY CHOOSE AKKA</p>
           <h2>A Partner You Can<br /><span>Build On</span></h2>
-          <p>We bring together deep technical expertise, uncompromising quality and a customer-first approach.</p>
+          <p>Our documented approach brings together technical coordination, reliable workmanship and long-term client relationships.</p>
           <div className="benefits">
             <div><Icon name="gear" /><span><b>Integrated Solutions</b>All MEP disciplines under one roof.</span></div>
-            <div><Icon name="shield" /><span><b>Quality & Safety</b>High standards on every project.</span></div>
+            <div><Icon name="shield" /><span><b>Quality & Safety</b>Inspections, risk assessment and training.</span></div>
             <div><Icon name="users" /><span><b>Proven Expertise</b>Experienced, skilled professionals.</span></div>
-            <div><Icon name="bolt" /><span><b>Sustainable Focus</b>Smarter, greener solutions.</span></div>
+            <div><Icon name="bolt" /><span><b>Responsible Practice</b>Energy-saving and site care.</span></div>
           </div>
         </div>
       </section>
@@ -704,14 +694,15 @@ export default function App() {
           <h2>Ready to Start<br />Your <span>Next Project?</span></h2>
         </div>
         <div className="contact-lines">
-          <a href="tel:+97143214567"><Icon name="phone" /><span><small>Call Us</small>+971 4 321 4567</span></a>
-          <a href="mailto:info@akka-me.com"><Icon name="mail" /><span><small>Email Us</small>info@akka-me.com</span></a>
+          <a href="tel:+97167418994"><Icon name="phone" /><span><small>Call Us</small>+971 6 741 8994</span></a>
+          <a href="mailto:info@akka-mep.com"><Icon name="mail" /><span><small>Email Us</small>info@akka-mep.com</span></a>
         </div>
         <Button>Get a Quote</Button>
       </section>
       </>}
 
       <footer>
+        <p className="prototype-note"><strong>Management review prototype.</strong> Company information follows the supplied prequalification and remains subject to AKKA approval. All imagery is illustrative and does not represent verified project photography or AKKA personnel. Forms prepare email drafts only.</p>
         <div className="footer-main">
           <div className="footer-brand">
             <img src="/akka-logo.jpg" alt="AKKA Electromechanical Contracting" />
@@ -723,17 +714,17 @@ export default function App() {
           </div>
           <div>
             <h4>Our Services</h4>
-            <a href="/services#services">Electrical</a><a href="/services#services">Mechanical & HVAC</a><a href="/services#services">Plumbing</a><a href="/services#services">Fire Fighting</a><a href="/services#services">Fit-Out</a>
+            <a href="/services#services">Electrical</a><a href="/services#services">Mechanical & HVAC</a><a href="/services#services">Plumbing</a><a href="/services#services">Fire Fighting</a><a href="/services#services">Operation & Maintenance</a>
           </div>
           <div>
             <h4>Connect With Us</h4>
-            <a href="mailto:info@akka-me.com">info@akka-me.com</a>
-            <p>Dubai, UAE</p>
+            <a href="mailto:info@akka-mep.com">info@akka-mep.com</a>
+            <p>SKY Tower, 5th Floor, Office 503<br />Sheikh Khalifa Bin Zayed Street<br />Al Nuaimiya 2, Ajman, UAE<br />P.O. Box 2288</p><p>Documented branches: Ajman, Dubai, Abu Dhabi</p><p>Official website: www.akka-mep.com</p>
           </div>
         </div>
         <div className="footer-bottom">
-          <span>© 2025 AKKA Electromechanical Contracting. All rights reserved.</span>
-          <span>Privacy Policy &nbsp; | &nbsp; Terms of Use</span>
+          <span>AKKA Electromechanical Contracting L.L.C. · Management review prototype</span>
+          <span>Company approval required before public release</span>
         </div>
       </footer>
     </main>

@@ -928,3 +928,39 @@ main > footer::before {
 @media (prefers-reduced-motion: reduce) {
   .career-area-card { transition: none; }
 }
+
+/* Content disclosures and verified details fit the existing cards and typography. */
+.prototype-note { margin: 0; padding: 0 0 26px; max-width: 1200px; font-size: 12px; line-height: 1.65; color: #a9acb2; }
+.prototype-note strong { color: #fff; }
+.project-info { padding-right: 34px; }
+.careers-team-photo > div > p { padding-right: 35px; }
+.project-card > .image-disclosure, .portfolio-card-image > .image-disclosure { position: absolute; z-index: 3; top: 14px; left: 14px; max-width: calc(100% - 28px); padding: 6px 10px; border-radius: 99px; background: #08090acc; color: #fff; font-size: 10px; line-height: 1.4; backdrop-filter: blur(6px); }
+.project-facts { margin: 20px 0; font-size: 14px; line-height: 1.5; }
+.project-facts > div { margin: 12px 0; }
+.project-facts dt { font-weight: 800; }
+.project-facts dd { margin: 2px 0 0; color: #6b6e74; }
+.stats span { white-space: normal; }
+.portfolio-stats > div > div { min-width: 0; }
+.portfolio-stats strong { font-size: clamp(21px, 2.2vw, 32px); }
+.contact-detail strong { overflow-wrap: anywhere; }
+.documented-address-panel { height: 100%; padding: 28px 32px 90px; background: radial-gradient(ellipse at 80% 10%, #ef102218, transparent 65%), linear-gradient(135deg, #f3f4f5, #e4e6e9); }
+.documented-address-panel > svg { width: 52px; height: 52px; color: var(--red); margin-bottom: 20px; }
+.documented-address-panel .eyebrow { font-size: 10px; letter-spacing: .25em; }
+.documented-address-panel h3 { font-size: clamp(28px, 3vw, 40px); line-height: 1.15; font-weight: 800; letter-spacing: -.04em; }
+.documented-address-panel h3 span { color: var(--red); }
+.documented-address-panel > p:last-child { color: #62656a; font-size: 14px; line-height: 1.6; margin-top: 16px; }
+.contact-map .map-label { top: auto; bottom: 18px; left: 24px; transform: none; max-width: calc(100% - 48px); }
+@media (min-width: 701px) and (max-width: 1000px) {
+  .documented-address-panel > svg { width: 36px; height: 36px; margin-bottom: 10px; }
+}
+@media (max-width: 700px) {
+  .footer-bottom > span { display: block; }
+  .documented-address-panel { padding: 22px 24px 85px; }
+  .documented-address-panel > svg { width: 32px; height: 32px; margin-bottom: 10px; }
+  .documented-address-panel .eyebrow { margin-bottom: 10px; }
+  .documented-address-panel h3 { font-size: 26px; }
+  .documented-address-panel > p:last-child { font-size: 12px; line-height: 1.5; margin-top: 10px; }
+  .contact-map .map-label { bottom: 14px; left: 18px; max-width: calc(100% - 36px); padding: 10px 12px; gap: 8px; }
+  .contact-map .map-label .contact-detail-icon { flex-basis: 32px; height: 32px; }
+  .contact-map .map-label small { font-size: 10px; }
+}
